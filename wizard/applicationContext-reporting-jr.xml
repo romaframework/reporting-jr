@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="ReportingAspect" class="org.romaframework.aspect.reporting.jr.JRReportingAspect"
+		singleton="true" />
+	<bean id="TemplateManager"
+		class="org.romaframework.aspect.reporting.jr.template.TemplateManagerImpl"
+		singleton="true">
+		<property name="packages">
+			<list>
+				<!-- ADDITIONAL PATHS TO DISCOVER JRXML FILES -->
+			</list>
+		</property>
+	</bean>
+</beans>

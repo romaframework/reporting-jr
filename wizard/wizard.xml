@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="add-module" name="roma-designer-wizard">
+	<property environment="env" />
+	<property name="roma.home" value="${env.ROMA_HOME}" />
+
+	<import file="${roma.home}/common/wizard/base-wizard.xml" />
+
+	<target name="add-module" depends="load-project-info">
+		<property name="module.ioc-file" value="applicationContext-reporting-jr.xml" />
+		<antcall target="copy-module-ioc-file" />
+
+		<antcall target="register-def-aspect">
+			<param name="module.aspect-name" value="reporting" />
+			<param name="module.aspect-component" value="ReportingAspect" />
+		</antcall>
+
+		<copy todir="${project.path}/${project.src}/${project.package-path}/reporting">
+			<fileset dir=".">
+				<include name="*.jrxml" />
+			</fileset>
+			<filterset>
+				<filter token="project.package" value="${project.package}" />
+			</filterset>
+		</copy>
+	</target>
+
+	<target name="update-module-v2.0.0" depends="load-project-info">
+		<delete>
+			<fileset dir="${project.path}/${project.run-time-lib}" includes="poi*.jar" />
+		</delete>
+		<antcall target="update-module-libs" />
+	</target>
+
+</project>

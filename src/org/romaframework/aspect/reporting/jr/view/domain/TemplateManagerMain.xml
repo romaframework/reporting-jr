@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://www.romaframework.org/xml/roma"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+	xsd:schemaLocation="http://www.romaframework.org/xml/roma http://www.romaframework.org/schema/v2/roma.xsd">
+	<aspects>
+		<view>
+			<form>
+				<area name="main" type="column">
+					<area name="searchPanel" type="row">
+						<area name="search" />
+						<area name="load" />
+					</area>
+					<area name="checkPanel" type="row">
+						<area name="applicationDomainOnly" type="row" />
+					</area>
+					<area name="fieldPanel" type="row" size="3">
+						<area name="availableClassNames" type="column" />
+						<area name="edit" type="column" />
+						<area name="save" type="column" />
+					</area>
+				</area>
+			</form>
+		</view>
+	</aspects>
+</class>
