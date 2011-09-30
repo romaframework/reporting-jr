@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." default="add-module" name="roma-designer-wizard">
-	<property environment="env" />
-	<property name="roma.home" value="${env.ROMA_HOME}" />
 
 	<import file="../../roma-core-wizard/wizard/base-wizard.xml" />
 
-	<target name="add-module" depends="load-project-info">
+	<target name="add-module" >
 		<property name="module.ioc-file" value="applicationContext-reporting-jr.xml" />
 		<antcall target="copy-module-ioc-file" />
 
