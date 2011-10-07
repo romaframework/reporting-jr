@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project basedir="." default="compile" name="roma-project-web">
+<?xml version="1.0" encoding="utf-8"?>
+<project basedir="." name="roma-reporting-jr" default="compile" >
 	<get src="https://github.com/romaframework/core/raw/master/roma-build.xml" dest="roma-build.xml" skipexisting="true" />
 	<import file="roma-build.xml" />
 </project>
