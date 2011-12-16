@@ -25,7 +25,7 @@ public class ReportingMenu {
 
 	public ReportingMenu() {}
 
-	@FlowAction(next = TemplateManagerMain.class, position = "screen://body")
+	@FlowAction(next = TemplateManagerMain.class, position = "body")
 	public void templateManager() {}
 
 }

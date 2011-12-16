@@ -104,10 +104,10 @@ public class TemplateManagerMain implements CustomValidation, ViewCallback, Refr
 			setSelectedAvailableClassName(search);
 			loadClasses();
 			Roma.fieldChanged(this, "availableClassNames");
-			Roma.aspect(FlowAspect.class).forward(new MessageOk("", "", null, "The Class is now available in list!"));
+			Roma.aspect(FlowAspect.class).popup(new MessageOk("", "", null, "The Class is now available in list!"));
 		}
 		catch (Exception e) {
-			Roma.aspect(FlowAspect.class).forward(new MessageOk("", "", null, "Class not found"));
+			Roma.aspect(FlowAspect.class).popup(new MessageOk("", "", null, "Class not found"));
 		}
 	}
 
@@ -185,7 +185,7 @@ public class TemplateManagerMain implements CustomValidation, ViewCallback, Refr
 		catch (NoSuchMethodException e) {
 			throw new ReportingException("Cannot save template, maybe there is no empty constructor defined");
 		}
-		Roma.aspect(FlowAspect.class).forward(new MessageOk("", "", null, "Templates saved successfully."));
+		Roma.aspect(FlowAspect.class).popup(new MessageOk("", "", null, "Templates saved successfully."));
 	}
 
 	public void setApplicationDomainOnly(boolean applicationDomainOnly) {
