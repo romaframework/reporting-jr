@@ -46,10 +46,11 @@ import net.sf.jasperreports.engine.type.VerticalAlignEnum;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.romaframework.aspect.i18n.I18NHelper;
+import org.romaframework.aspect.i18n.I18NType;
 import org.romaframework.aspect.reporting.ReportingAspect;
 import org.romaframework.aspect.reporting.ReportingConstants;
 import org.romaframework.aspect.reporting.ReportingFeatureHelper;
+import org.romaframework.aspect.reporting.feature.ReportingClassFeatures;
 import org.romaframework.aspect.reporting.jr.component.BaseCollectionComponentJr;
 import org.romaframework.aspect.reporting.jr.component.BaseComponentJr;
 import org.romaframework.aspect.reporting.jr.component.CollectionListComponentJr;
@@ -322,7 +323,7 @@ public class JRDesignHelper {
 	public static JRDesignBand getTitleBand(SchemaClassDefinition schemaClass, int width) {
 
 		String reportName = ReportingFeatureHelper.getLabel(schemaClass);
-		reportName = I18NHelper.getLabel(schemaClass, reportName);
+		reportName = Roma.i18n().get(schemaClass, I18NType.LABEL,ReportingClassFeatures.LABEL);
 
 		if (reportName == null) {
 			reportName = schemaClass.getName();
