@@ -47,7 +47,6 @@ import org.romaframework.core.Utility;
 import org.romaframework.core.schema.SchemaClass;
 import org.romaframework.core.schema.SchemaClassDefinition;
 import org.romaframework.core.schema.SchemaClassResolver;
-import org.romaframework.core.schema.SchemaEvent;
 import org.romaframework.core.schema.SchemaFeatures;
 import org.romaframework.core.schema.SchemaObject;
 
@@ -242,10 +241,6 @@ public class JRReportingAspect extends ReportingAspectAbstract {
 		if (templateManager == null) {
 			templateManager = Roma.component(TemplateManager.class);
 		}
-	}
-
-	public void configEvent(SchemaEvent event) {
-
 	}
 
 	public Object getUnderlyingComponent() {

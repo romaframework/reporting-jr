@@ -12,4 +12,5 @@
 			</list>
 		</property>
 	</bean>
+	<bean  class="org.romaframework.aspect.reporting.ReportingAspectConfigurator" singleton="true" lazy-init="false" />
 </beans>
