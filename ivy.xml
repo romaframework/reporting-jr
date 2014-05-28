@@ -14,6 +14,6 @@
 	</publications>
 	<dependencies>
 		<dependency org="org.romaframework" name="roma-frontend" rev="latest.integration" conf="*->default;wizard->wizard" />
-		<dependency org="net.sf.jasperreports" name="jasperreports" rev="latest.integration" conf="*->default" />
+		<dependency org="net.sf.jasperreports" name="jasperreports" rev="4.5.1" conf="*->default" />
 	</dependencies>
 </ivy-module>
